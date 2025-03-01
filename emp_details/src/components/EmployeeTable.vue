@@ -2,7 +2,7 @@
   <div>
     <div class="container mt-5">
       <!-- Button to open modal -->
-      <button class="btn btn-primary" @click="showModal">Add Employee</button>
+      <button style="margin-bottom: 7px;" class="btn btn-primary" @click="showModal">Add Employee</button>
       &nbsp; <input v-model="searchQuery" placeholder="Search employees..." />
 
       <!-- Add employee Modal -->

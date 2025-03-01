@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// 🚀 CREATE Employee (POST)
+// CREATE Employee (POST)
 app.post("/employees", (req, res) => {
     const {empNo, empName, empDOB, empAge, DateofJoin, hikepercent } = req.body;
     console.log('Request body-------->',req.body)
@@ -21,7 +21,7 @@ app.post("/employees", (req, res) => {
     });
 });
 
-// 📋 READ Employees (GET)
+// READ Employees (GET)
 app.get("/employees", (req, res) => {
     db.query("SELECT * FROM employees", (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
@@ -29,7 +29,7 @@ app.get("/employees", (req, res) => {
     });
 });
 
-// 🔍 READ Single Employee by ID (GET)
+//  READ Single Employee by ID (GET)
 // app.get("/employees/:id", (req, res) => {
 //     const { id } = req.params;
 //     db.query("SELECT * FROM employees WHERE empNo = ?", [id], (err, result) => {
@@ -39,7 +39,7 @@ app.get("/employees", (req, res) => {
 //     });
 // });
 
-// ✏️ UPDATE Employee (PUT)
+// UPDATE Employee (PUT)
 app.put("/employees/:id", (req, res) => {
     const { id } = req.params;
     const {empName, empDOB, empAge, DateofJoin, hikepercent } = req.body;
@@ -50,7 +50,7 @@ app.put("/employees/:id", (req, res) => {
     });
 });
 
-// ❌ DELETE Employee (DELETE)
+// DELETE Employee (DELETE)
 app.delete("/employees/:id", (req, res) => {
     const { id } = req.params;
     db.query("DELETE FROM employees WHERE empNo=?", [id], (err, result) => {
@@ -61,5 +61,5 @@ app.delete("/employees/:id", (req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
