@@ -2,6 +2,8 @@
   <div>
     <div class="container mt-5">
       <!-- Button to open modal -->
+       <h2>Employee Management</h2>
+       <br>
       <button style="margin-bottom: 7px;" class="btn btn-primary" @click="showModal">Add Employee</button>
       &nbsp; <input v-model="searchQuery" placeholder="Search employees..." />
 
@@ -95,8 +97,8 @@
     </div>
 
     <!-- Display data using table -->
-
-    <h2>Employee List</h2>
+<div class="container mt-5">
+  <h2>Employee List</h2>
     <table :border="1">
       <thead>
         <tr>
@@ -128,6 +130,8 @@
         </tr>
       </tbody>
     </table>
+</div>
+    
   </div>
 </template>
 
