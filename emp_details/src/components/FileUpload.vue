@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-5">
     <h2>Upload Employee Document</h2>
-
+<!-- file input -->
     <form @submit.prevent="uploadFile">
       <div class="mb-3">
         <label class="form-label">Select File:</label>
@@ -19,6 +19,7 @@
 
     <h3 class="mt-4">Uploaded Files:</h3>
     <ul>
+        <!-- display all uploaded file -->
       <li v-for="file in files" :key="file.id">
         <p style="margin-top: 20px">
           {{ file.file_name }}
